@@ -33,6 +33,8 @@ gem 'devise', '~> 3.5.2'
 
 gem 'gravatarify', '~> 3.0.0'
 
+gem 'geocoder', '~> 1.2.9'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

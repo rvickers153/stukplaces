@@ -31,6 +31,30 @@
   <%= @place.user_id %>
 </p>
 
+<%= @place.latitude %>
+<%= @place.longitude %>
+
+<div id="map" style="width: 230px; height: 230px;"></div>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
 </div>
+
+<script type="text/javascript">
+
+var map;
+var mycenter = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: mycenter,
+    zoom: 8
+  });
+  var marker = new google.maps.Marker({
+    position: mycenter,
+    map: map
+  });
+}
+
+    </script>
+
+
